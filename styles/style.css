@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+header{
+    display: flex;
+    
+    align-items: center;
+}
+
+
+header img{
+    width: 200px;
+}
+
+
+header nav{
+    margin-left: auto;
+}
+
+
+.navbar-personalizada .navbar-nav .nav-link{
+    color: white;
+}
+
+
+.nav-link a:hover{
+    color: red; /*Acá no sé por qué el Hover no funciona con Bootstrap*/
+}
+
+
+.navbar-toggler-icon{
+    color: white;
+}
+
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+
+}
+
+
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/*Estilos del Main*/
+main{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    ;
+}
+
+
+main video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+   z-index: -1;
+}
+
+
+.izquierda-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+
+
+.logo-main{
+    width: 600px;
+    height: 150px;
+    margin-top: 100px;
+}
+
+
+.derecha-main{
+    max-width: 50%;
+    margin-left: auto;
+}
+
+
+.miles-morales-main{
+    margin-top: 100px;
+    width: 600px;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.prowler .spider-man-juego-logo{
+    margin-top: 100px;
+    width: 600px;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.button{
+    background-color: red;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 100px;
+    margin-left: 150px; /*Quise centrar el boton pero no funciono asi que tuve que moverlo*/
+    width: 250px; /* Tuve que establecerle un width debido que en automatico toma el tamaño del div*/
+}
+
+
+.button a:hover{
+    text-decoration: none;
+    color: goldenrod;
+}
+
+
+.ancla-button{
+    color: white;
+}
+
+
+/*estilos del footer*/
+footer {
+    margin-top: auto;
+    background-color: black;
+    padding: 45px 0;
+  }
+  
+
+  .contenedor {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 200px;
+  }
+
+
+  .logo-pequeño{
+    width: 100px;
+  }
+  
+  
+  .red-social {
+    display: flex;
+    gap: 10px;
+  }
+  
+
+  .copyright {
+    text-align: center;
+  }
+  
+
+  /*media queries*/
+  @media screen and (max-width:500px)
+  {
+    
+
+/*Estilos del Main*/
+main{
+    position: relative;
+    /*display: flex;*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+
+main video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+   z-index: -1;
+}
+
+
+.izquierda-main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    z-index: 1;
+}
+
+
+.logo-main{
+    width: 80%;
+    height: auto;
+    margin-top: 30vh; /*Logre centrar un poco pero no sé si es la forma correcta*/
+}
+
+
+.miles-morales-main{
+    display: none;
+   
+}
+
+
+.button{
+    background-color: red;
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 0;
+    width: 250px; 
+}
+
+
+.button a:hover{
+    text-decoration: none;
+    color: goldenrod;
+}
+
+
+.ancla-button{
+    color: white;
+}
+
+
+/*estilos del footer*/
+footer {
+    margin-top: 0;
+    background-color: black;
+  }
+  
+
+  .contenedor {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    justify-items: center;
+  }
+  
+  
+  .red-social {
+    display: flex;
+    gap: 10px;
+  }
+  
+
+  .copyright {
+    text-align: center;
+  }
+
+}
