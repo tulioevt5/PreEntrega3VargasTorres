@@ -1,0 +1,272 @@
+/*reset de mi css*/
+@include reset-css;
+
+body{
+    background-color: $color-fondo;
+    color: $color-texto;
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    img{
+        width: 200px;
+    }
+    nav{
+        margin-left: auto;
+        ul{
+           list-style: none;
+           display: flex;
+           gap: 1.5rem;
+           li{
+              a{
+                text-decoration: none;
+                color: $color-texto;
+              }
+           }
+        }
+        .collapse .navbar-collapse{
+            .navbar-nav{
+                @extend %navbaar;
+                .nav-link{
+                    @extend %navbar;
+                    a:hover{
+                        color: $color-principal;/*Acá no sé por qué el Hover no funciona con Bootstrap*/
+                    }
+                }
+            }
+        }
+    }
+    .navbar-personalizada{
+        @extend %navbar;
+    }
+    .navbar-toggler{
+        .navbar-toggler-icon{
+            color: $color-texto;
+        }
+    }
+}
+
+/*estilos del main*/
+main{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover ;
+        z-index: -1;
+    }
+    .izquierda-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 1;
+        .logo-main{
+            width: 600px;
+            height: 150px;
+            margin-top: 100px;
+        }
+        .button{
+            a:hover{
+                text-decoration: none;
+                color: goldenrod;
+            }
+            .ancla-button{
+                color: $color-texto;
+            }
+        }  
+    }
+}
+
+.derecha-main{
+    max-width: 50%;
+    margin-left: auto;
+    .miles-morales-main{
+        margin-top: 100px;
+        width: 600px;
+        height: auto;
+        object-fit: cover;
+    }
+    .prowler .spider-man-juego-logo{
+        @extend %prowler-sp;
+    }
+}
+
+
+
+footer{
+    @include footer;
+    .contenedor {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 200px;
+        .caja-1{
+            figure{
+                .logo-pequeño{
+                    width: 100px;
+                }
+            }  
+        }
+    }
+}
+
+/*media queries*/
+/*media querie mobile*/
+@media screen and (max-width: $mobile){
+/*Estilos del Main*/
+main{
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover ;
+        z-index: -1;
+    }
+    .izquierda-main {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center;
+        z-index: 1;
+        .logo-main{
+            width: 80%;
+            height: auto;
+            margin-top: 30vh; /*Logre centrar un poco pero no sé si es la forma correcta*/
+        }
+        .button{
+            background-color: red;
+            border-radius: 20px;
+            padding: 10px;
+            margin-left: 0;
+            width: 250px; 
+            a{
+              color: $color-texto;
+            }
+            a:hover{
+                text-decoration: none;
+                color: goldenrod;
+            }
+        }
+    }
+    .derecha-main{
+        .miles-morales-main{
+            display: none;
+        }
+    }
+}
+
+/*estilos del footer*/
+footer {
+    margin-top: 0;
+    background-color: $color-fondo;
+    .contenedor {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        justify-items: center;
+        .caja-3{
+            .red-social {
+                display: flex;
+                gap: 10px;
+              }
+        }
+        .copyright {
+            text-align: center;
+          }
+      }
+  }
+}
+
+/*media querie tablet*/
+@media screen and(min-width: $tablet){
+main{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover ;
+        z-index: -1;
+        }
+    .izquierda-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 1;
+            .logo-main{
+                width: 50%;
+                height: auto;
+                margin-top: 30vh; /*Logre centrar un poco pero no sé si es la forma correcta*/
+            }
+            .button{
+                background-color: $color-principal;
+                border-radius: 20px;
+                padding: 10px;
+                margin-left: 0;
+                width: 250px; 
+                a{
+                  color: $color-texto;
+                }
+                a:hover{
+                    text-decoration: none;
+                    color: goldenrod;
+                }
+            }
+        }
+        .derecha-main{
+            max-width: 50%;
+            margin-left: auto;
+            .miles-morales-main{
+                margin-top: 100px;
+                width: 400px;
+                height: auto;
+                object-fit: cover; 
+            } 
+        }
+    }
+    
+    /*estilos del footer*/
+    footer {
+        margin-top: 0;
+        background-color: $color-fondo;
+        .contenedor {
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+            justify-items: center;
+            .caja-3{
+                .red-social {
+                    display: flex;
+                    gap: 10px;
+                  }
+            }
+            .copyright {
+                text-align: center;
+              }
+          }
+      }
+}
+
