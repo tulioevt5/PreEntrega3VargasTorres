@@ -28,7 +28,7 @@ header{
         }
         .collapse .navbar-collapse{
             .navbar-nav{
-                @extend %navbaar;
+                @extend %navbar;
                 .nav-link{
                     @extend %navbar;
                     a:hover{
@@ -74,21 +74,28 @@ main{
             height: 150px;
             margin-top: 100px;
         }
-        .button{
-            a:hover{
-                text-decoration: none;
-                color: goldenrod;
-            }
-            .ancla-button{
-                color: $color-texto;
-            }
-        }  
+        .ancla-button{
+            color: $color-texto;
+            background-color: $color-principal;
+            border-radius: 20px;
+            padding: 15px;
+            margin-top: 10%;
+            margin-left: 25%;
+            width: 250px;
+        }
+        .ancla-button:hover{
+            text-decoration: none;
+            color: goldenrod;
     }
+        
+    }  
 }
+
 
 .derecha-main{
     max-width: 50%;
     margin-left: auto;
+    overflow: hidden;
     .miles-morales-main{
         margin-top: 100px;
         width: 600px;
@@ -152,20 +159,18 @@ main{
             height: auto;
             margin-top: 30vh; /*Logre centrar un poco pero no sé si es la forma correcta*/
         }
-        .button{
-            background-color: red;
+        .ancla-button{
+            color: $color-texto;
+            background-color: $color-principal;
             border-radius: 20px;
             padding: 10px;
             margin-left: 0;
             width: 250px; 
-            a{
-              color: $color-texto;
-            }
-            a:hover{
-                text-decoration: none;
-                color: goldenrod;
-            }
         }
+        .ancla-button:hover{
+            text-decoration: none;
+            color: goldenrod;
+    }
     }
     .derecha-main{
         .miles-morales-main{
@@ -196,7 +201,7 @@ footer {
 }
 
 /*media querie tablet*/
-@media screen and(min-width: $tablet){
+@media screen and(min-width: $tablet) and(max-width: $desktop){
 main{
     position: relative;
     display: flex;
@@ -220,29 +225,28 @@ main{
             .logo-main{
                 width: 50%;
                 height: auto;
-                margin-top: 30vh; /*Logre centrar un poco pero no sé si es la forma correcta*/
+                margin-top: 10vh; /*Logre centrar un poco pero no sé si es la forma correcta*/
             }
-            .button{
+            .ancla-button{
+                color: $color-texto;
                 background-color: $color-principal;
                 border-radius: 20px;
                 padding: 10px;
                 margin-left: 0;
                 width: 250px; 
-                a{
-                  color: $color-texto;
-                }
-                a:hover{
-                    text-decoration: none;
-                    color: goldenrod;
-                }
             }
+            .ancla-button:hover{
+                text-decoration: none;
+                color: goldenrod;
+        }
         }
         .derecha-main{
             max-width: 50%;
             margin-left: auto;
+            overflow: hidden;
             .miles-morales-main{
                 margin-top: 100px;
-                width: 400px;
+                width: 100%;
                 height: auto;
                 object-fit: cover; 
             } 

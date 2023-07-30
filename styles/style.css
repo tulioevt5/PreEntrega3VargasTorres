@@ -1,11 +1,11 @@
 @charset "UTF-8";
-.prowler .spider-man-juego-logo {
+.derecha-main .prowler .spider-man-juego-logo {
   margin-top: 100px;
   width: 600px;
   height: auto;
   object-fit: cover; }
 
-header .navbar-personalizada, .navbar-personalizada .navbar-nav .nav-link {
+header nav .collapse .navbar-collapse .navbar-nav, header nav .collapse .navbar-collapse .navbar-nav .nav-link, header .navbar-personalizada {
   color: #f5f5f5; }
 
 /*reset de mi css*/
@@ -33,13 +33,11 @@ header {
       header nav ul li a {
         text-decoration: none;
         color: #f5f5f5; }
-
-.nav-link a:hover {
-  color: #cb1515;
-  /*Acá no sé por qué el Hover no funciona con Bootstrap*/ }
-
-.navbar-toggler-icon {
-  color: #f5f5f5; }
+    header nav .collapse .navbar-collapse .navbar-nav .nav-link a:hover {
+      color: #cb1515;
+      /*Acá no sé por qué el Hover no funciona con Bootstrap*/ }
+  header .navbar-toggler .navbar-toggler-icon {
+    color: #f5f5f5; }
 
 /*estilos del main*/
 main {
@@ -56,44 +54,36 @@ main {
     height: 100%;
     object-fit: cover;
     z-index: -1; }
-
-.izquierda-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  z-index: 1; }
-
-.logo-main {
-  width: 600px;
-  height: 150px;
-  margin-top: 100px; }
+  main .izquierda-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1; }
+    main .izquierda-main .logo-main {
+      width: 600px;
+      height: 150px;
+      margin-top: 100px; }
+    main .izquierda-main .ancla-button {
+      color: #f5f5f5;
+      background-color: #cb1515;
+      border-radius: 20px;
+      padding: 15px;
+      margin-top: 10%;
+      margin-left: 25%;
+      width: 250px; }
+    main .izquierda-main .ancla-button:hover {
+      text-decoration: none;
+      color: goldenrod; }
 
 .derecha-main {
   max-width: 50%;
-  margin-left: auto; }
-
-.miles-morales-main {
-  margin-top: 100px;
-  width: 600px;
-  height: auto;
-  object-fit: cover; }
-
-.button {
-  background-color: #cb1515;
-  border-radius: 20px;
-  padding: 10px;
-  margin-top: 100px;
-  margin-left: 150px;
-  /*Quise centrar el boton pero no funciono asi que tuve que moverlo*/
-  width: 250px;
-  /* Tuve que establecerle un width debido que en automatico toma el tamaño del div*/ }
-
-.button a:hover {
-  text-decoration: none;
-  color: goldenrod; }
-
-.ancla-button {
-  color: #f5f5f5; }
+  margin-left: auto;
+  overflow: hidden; }
+  .derecha-main .miles-morales-main {
+    margin-top: 100px;
+    width: 600px;
+    height: auto;
+    object-fit: cover; }
 
 footer {
   margin-top: auto;
@@ -139,17 +129,16 @@ footer {
         height: auto;
         margin-top: 30vh;
         /*Logre centrar un poco pero no sé si es la forma correcta*/ }
-      main .izquierda-main .button {
-        background-color: red;
+      main .izquierda-main .ancla-button {
+        color: #f5f5f5;
+        background-color: #cb1515;
         border-radius: 20px;
         padding: 10px;
         margin-left: 0;
         width: 250px; }
-        main .izquierda-main .button a {
-          color: #f5f5f5; }
-        main .izquierda-main .button a:hover {
-          text-decoration: none;
-          color: goldenrod; }
+      main .izquierda-main .ancla-button:hover {
+        text-decoration: none;
+        color: goldenrod; }
     main .derecha-main .miles-morales-main {
       display: none; }
   /*estilos del footer*/
@@ -160,14 +149,14 @@ footer {
       grid-template-columns: 1fr;
       grid-gap: 20px;
       justify-items: center; }
-    footer .red-social {
-      display: flex;
-      gap: 10px; }
-    footer .copyright {
-      text-align: center; } }
+      footer .contenedor .caja-3 .red-social {
+        display: flex;
+        gap: 10px; }
+      footer .contenedor .copyright {
+        text-align: center; } }
 
 /*media querie tablet*/
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 501px) and (max-width: 900px) {
   main {
     position: relative;
     display: flex;
@@ -190,25 +179,25 @@ footer {
       main .izquierda-main .logo-main {
         width: 50%;
         height: auto;
-        margin-top: 30vh;
+        margin-top: 10vh;
         /*Logre centrar un poco pero no sé si es la forma correcta*/ }
-      main .izquierda-main .button {
+      main .izquierda-main .ancla-button {
+        color: #f5f5f5;
         background-color: #cb1515;
         border-radius: 20px;
         padding: 10px;
         margin-left: 0;
         width: 250px; }
-        main .izquierda-main .button a {
-          color: #f5f5f5; }
-        main .izquierda-main .button a:hover {
-          text-decoration: none;
-          color: goldenrod; }
+      main .izquierda-main .ancla-button:hover {
+        text-decoration: none;
+        color: goldenrod; }
     main .derecha-main {
       max-width: 50%;
-      margin-left: auto; }
+      margin-left: auto;
+      overflow: hidden; }
       main .derecha-main .miles-morales-main {
         margin-top: 100px;
-        width: 400px;
+        width: 100%;
         height: auto;
         object-fit: cover; }
   /*estilos del footer*/
@@ -219,8 +208,8 @@ footer {
       grid-template-columns: 1fr;
       grid-gap: 20px;
       justify-items: center; }
-    footer .red-social {
-      display: flex;
-      gap: 10px; }
-    footer .copyright {
-      text-align: center; } }
+      footer .contenedor .caja-3 .red-social {
+        display: flex;
+        gap: 10px; }
+      footer .contenedor .copyright {
+        text-align: center; } }
