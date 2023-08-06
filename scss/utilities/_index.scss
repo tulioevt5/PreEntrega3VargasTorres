@@ -1,12 +1,10 @@
 /*reset de mi css*/
 @include reset-css;
-
 body{
     background-color: $color-fondo;
     color: $color-texto;
     overflow-x: hidden;
 }
-
 header{
     display: flex;
     align-items: center;
@@ -30,10 +28,11 @@ header{
             .navbar-nav{
                 @extend %navbar;
                 .nav-link{
+                    color: $color-texto;
                     @extend %navbar;
-                    a:hover{
-                        color: $color-principal;/*Acá no sé por qué el Hover no funciona con Bootstrap*/
-                    }
+                        a:hover{
+                            color: $color-principal;/*Acá no sé por qué el Hover no funciona con Bootstrap*/
+                        }  
                 }
             }
         }
@@ -47,7 +46,6 @@ header{
         }
     }
 }
-
 /*estilos del main*/
 main{
     position: relative;
@@ -87,11 +85,8 @@ main{
             text-decoration: none;
             color: goldenrod;
     }
-        
     }  
 }
-
-
 .derecha-main{
     max-width: 50%;
     margin-left: auto;
@@ -106,9 +101,218 @@ main{
         @extend %prowler-sp;
     }
 }
-
-
-
+.about-section{
+    padding-top: 30px;
+    padding-left: 60px;
+    h2{
+        position: relative;
+        padding-left: 20px;
+    }
+    h2::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 5px;
+        background-color: $color-principal;
+    }
+    .image-and-text{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        img{
+            width: 25%;
+            padding-top: 50px;
+        }
+        p{
+            padding-left: 10%;
+            padding-top: 50px;
+        }
+    }
+}
+.personajes-section{
+    margin-top: 60px;
+    padding-left: 60px;
+    h2{
+        position: relative;
+        padding-left: 20px;
+    }
+    h2::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 5px;
+        background-color: $color-principal;
+    }
+    h3{
+        margin-top: 40px;
+    }
+    .section-miles-morales{
+        display: flex;
+        align-items: center;
+        .personajes-miles-morales{
+           @extend %medida-imagen;
+        }
+        p{
+         margin-left: 5%;
+         margin-right: 2%;   
+        }
+    }
+    .section-peter-parker{
+        padding-right: 60px;
+        display: flex;
+        align-items: center;
+        .personajes-peter-parker{
+            @extend %medida-imagen;
+        }
+        p{
+            margin-right: 5%;
+        }
+    }
+    .section-peter-benjamin-b-parker{
+        display: flex;
+        align-items: center;
+        .personajes-peter-benjamin-b-parker{
+            @extend %medida-imagen;
+        }
+        p{
+           @extend %parrafo;
+        }
+    }
+    .section-gwen-stacy{
+        padding-right: 60px;
+        display: flex;
+        align-items: center;
+        .personajes-gwen-stacy{
+            @extend %medida-imagen;   
+        }
+        p{
+            margin-right: 5%;
+        }
+    }
+    .section-peter-porker{
+        display: flex;
+        align-items: center;
+        .personajes-peter-porker{
+            @extend %medida-imagen;
+        }
+        p{
+            @extend %parrafo; 
+        }
+    }
+    .section-peter-parker-detective{
+        padding-right: 60px;
+        display: flex;
+        align-items: center;
+        .personajes-peter-parker-detective{
+            @extend %medida-imagen;
+        }
+        p{
+            margin-right: 5%;
+        }
+    }
+    .section-peni-parker{
+        display: flex;
+        align-items: center;
+        .personajes-peni-parker{
+            @extend %medida-imagen;
+        }
+        p{
+            @extend %parrafo;
+        }
+    }
+    .section-kingpin{
+        padding-right: 60px;
+        display: flex;
+        align-items: center;
+        .personajes-kingpin{
+         @extend %medida-imagen;
+        }
+        p{
+            margin-right: 5%;
+        }
+    }
+    .section-olivia-octavius{
+        display: flex;
+        align-items: center;
+        .personajes-olivia-ocatavius{
+            @extend %medida-imagen;
+        }
+        p{
+          @extend %parrafo;
+        }
+    }
+    .section-marvel-may{
+        display: flex;
+        align-items: center;
+        .personajes-marvel-may{
+            width: 30%;
+        }
+    }
+    .section-merodeador{
+        display: flex;
+        align-items: center;
+        .personajes-merodeador{
+            @extend %medida-imagen;
+        }
+        p{
+          @extend %parrafo;
+        }
+    }
+    .section-jefferson-davis{
+        padding-right: 60px;
+        display: flex;
+        align-items: center;
+        .personajes-jefferson-davis{
+            @extend %medida-imagen;
+        }
+        p{
+          margin-right: 5%
+        }
+    }
+    .section-rio-morales{
+        display: flex;
+        align-items: center;
+        p{
+            margin-left: 5%;
+            margin-right: 2%;
+        }
+        .personajes-rio-morales{
+            @extend %medida-imagen;
+        }
+    }
+}
+.section-trailer{
+    h2{
+        margin-top: 50px;
+        position: relative;
+        padding-left: 20px;
+    }
+    h2::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 5px;
+        background-color: $color-principal;
+}
+.h3-proximamente{
+    display: flex;
+    justify-content: center;
+}
+.trailer{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    img{
+        width: 50%;
+    }
+}
+}
 footer{
     @include footer;
     .contenedor {
@@ -117,15 +321,37 @@ footer{
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 200px;
         .caja-1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             figure{
                 .logo-pequeño{
                     width: 100px;
                 }
-            }  
+            } 
+            .mapa-sitio{
+                ul{
+                    li{
+                        list-style: none;
+                    }
+                }    
+            }      
+        }
+        .caja-2{
+         span{
+            color: $color-principal;
+         }   
         }
     }
+.copyright{
+    grid-column: span 3;
+    text-align: center;
+    margin-block-start: 20px;
+    small{
+        display: block;
+    }
 }
-
+}
 /*media queries*/
 /*media querie mobile*/
 @media screen and (max-width: $mobile){
@@ -178,28 +404,322 @@ main{
         }
     }
 }
-
+.about-section{
+    padding-top: 30px;
+    padding-left: 0;
+    h2{
+        position: relative;
+        padding-left: 15px;
+    }
+    h2::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 5px;
+        background-color: $color-principal;
+    }
+    .image-and-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        img{
+            margin: 0 auto;
+            width: 60%;
+            padding-top: 50px;
+        }
+        p{
+            padding-left: 0; 
+            padding-right: 2%;
+            padding-top: 50px;
+        }
+    }
+}
+.personajes-section{
+    margin-top: 30px;
+    padding-left: 0;
+    h2{
+        position: relative;
+        padding-left: 15px;
+    }
+    h2::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 5px;
+        background-color: $color-principal;
+    }
+    .h3-personajes{
+        text-align: center;
+        margin-top: 40px;
+    }
+   
+    .section-miles-morales{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        .personajes-miles-morales{
+            margin: 5% auto;
+            width: 70%;
+            height: auto;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+            padding-right: 2%;
+        }
+    }
+    .section-peter-parker{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 0;
+        .personajes-peter-parker{
+            margin-top: 5%;
+            margin-bottom: 5%;
+            width: 70%;
+            height: auto;
+            padding: 0;
+        }
+        p{
+            padding-left: 5%;
+        }
+    }
+    .section-peter-benjamin-b-parker{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        .personajes-peter-benjamin-b-parker{
+            margin: 5% auto;
+            width: 70%;
+            height: auto;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+            padding-right: 2%;
+        }
+    }
+    .section-gwen-stacy{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 0;
+        .personajes-gwen-stacy{
+            margin-top: 5%;
+            margin-bottom: 5%;
+            width: 70%;
+            height: auto;
+            padding: 0;
+        }
+        p{
+           padding-left: 5%;
+        }
+    }
+    .section-peter-porker{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        .personajes-peter-porker{
+            margin: 5% auto;
+            width: 70%;
+            height: auto;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+            padding-right: 2%;
+        }
+    }
+    .section-peter-parker-detective{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 0;
+        .personajes-peter-parker-detective{
+            margin-top: 5%;
+            margin-bottom: 5%;
+            width: 70%;
+            height: auto;
+            padding: 0;
+        }
+        p{
+          padding-left: 5%; 
+        }
+    }
+    .section-peni-parker{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        .personajes-peni-parker{
+            margin: 5% auto;
+            width: 70%;
+            height: auto;
+        }
+        p{
+           margin: 0;
+           padding: 0;
+           padding-right: 2%;  
+        }
+    }
+    .section-kingpin{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 0;
+        .personajes-kingpin{
+            margin-top: 5%;
+            margin-bottom: 5%;
+            width: 70%;
+            height: auto;
+            padding: 0;
+        }
+        p{
+            padding-left: 5%;
+        }
+    }
+    .section-olivia-octavius{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        .personajes-olivia-octavius{
+            margin: 5% auto;
+            width: 70%;
+            height: auto;
+    }
+         p{
+            margin: 0;
+            padding: 0;
+            padding-right: 2%;  
+          }
+    }
+    .section-merodeador{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        .personajes-merodeador{
+            margin: 5% auto;
+            width: 70%;
+            height: auto;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+            padding-right: 2%;  
+          }
+    }
+    .section-jefferson-davis{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 0;
+        .personajes-jefferson-davis{
+            margin-top: 5%;
+            margin-bottom: 5%;
+            width: 70%;
+            height: auto;
+            padding: 0
+        }
+        p{
+            padding-left: 5%;
+        }
+    }
+    .section-rio-morales{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        .personajes-rio-morales{
+            margin: 5% auto;
+            width: 70%;
+            height: auto;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+            padding-right: 2%; 
+        }
+    }
+}
 /*estilos del footer*/
 footer {
     margin-top: 0;
-    background-color: $color-fondo;
-    .contenedor {
-        grid-template-columns: 1fr;
-        grid-gap: 20px;
-        justify-items: center;
-        .caja-3{
-            .red-social {
+        background-color: $color-fondo;
+        .contenedor {
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+            justify-items: center;
+            .caja-1{
                 display: flex;
-                gap: 10px;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .caja-3{
+                .red-social {
+                    display: flex;
+                    gap: 10px;
+                  }
+            }
+            .copyright {
+                text-align: center;
               }
-        }
-        .copyright {
-            text-align: center;
           }
       }
-  }
 }
-
 /*media querie tablet*/
 @media screen and(min-width: $tablet) and(max-width: $desktop){
 main{
@@ -252,7 +772,21 @@ main{
             } 
         }
     }
-    
+    .section-trailer{
+        h2{
+            position: relative;
+            padding-left: 20px;
+        }
+        h2::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            background-color: $color-principal;
+        }
+    }
     /*estilos del footer*/
     footer {
         margin-top: 0;
@@ -273,4 +807,3 @@ main{
           }
       }
 }
-

@@ -9,3 +9,18 @@
 %navbar{
     color: $color-texto;
 }
+
+%medida-imagen{
+    width: 30%;
+    height: 400px;
+}
+
+%parrafo{
+    margin-left: 5%;
+    margin-right: 2%;
+}
+
+%parrafo-mobile{
+    padding-left: 0px; 
+    padding-right: 2%;
+}

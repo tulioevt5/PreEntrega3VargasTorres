@@ -8,6 +8,14 @@
 header nav .collapse .navbar-collapse .navbar-nav, header nav .collapse .navbar-collapse .navbar-nav .nav-link, header .navbar-personalizada {
   color: #f5f5f5; }
 
+.personajes-section .section-miles-morales .personajes-miles-morales, .personajes-section .section-peter-parker .personajes-peter-parker, .personajes-section .section-peter-benjamin-b-parker .personajes-peter-benjamin-b-parker, .personajes-section .section-gwen-stacy .personajes-gwen-stacy, .personajes-section .section-peter-porker .personajes-peter-porker, .personajes-section .section-peter-parker-detective .personajes-peter-parker-detective, .personajes-section .section-peni-parker .personajes-peni-parker, .personajes-section .section-kingpin .personajes-kingpin, .personajes-section .section-olivia-octavius .personajes-olivia-ocatavius, .personajes-section .section-merodeador .personajes-merodeador, .personajes-section .section-jefferson-davis .personajes-jefferson-davis, .personajes-section .section-rio-morales .personajes-rio-morales {
+  width: 30%;
+  height: 400px; }
+
+.personajes-section .section-peter-benjamin-b-parker p, .personajes-section .section-peter-porker p, .personajes-section .section-peni-parker p, .personajes-section .section-olivia-octavius p, .personajes-section .section-merodeador p {
+  margin-left: 5%;
+  margin-right: 2%; }
+
 /*reset de mi css*/
 * {
   margin: 0;
@@ -33,9 +41,11 @@ header {
       header nav ul li a {
         text-decoration: none;
         color: #f5f5f5; }
-    header nav .collapse .navbar-collapse .navbar-nav .nav-link a:hover {
-      color: #cb1515;
-      /*Acá no sé por qué el Hover no funciona con Bootstrap*/ }
+    header nav .collapse .navbar-collapse .navbar-nav .nav-link {
+      color: #f5f5f5; }
+      header nav .collapse .navbar-collapse .navbar-nav .nav-link a:hover {
+        color: #cb1515;
+        /*Acá no sé por qué el Hover no funciona con Bootstrap*/ }
   header .navbar-toggler .navbar-toggler-icon {
     color: #f5f5f5; }
 
@@ -85,6 +95,135 @@ main {
     height: auto;
     object-fit: cover; }
 
+.about-section {
+  padding-top: 30px;
+  padding-left: 60px; }
+  .about-section h2 {
+    position: relative;
+    padding-left: 20px; }
+  .about-section h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: #cb1515; }
+  .about-section .image-and-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    .about-section .image-and-text img {
+      width: 25%;
+      padding-top: 50px; }
+    .about-section .image-and-text p {
+      padding-left: 10%;
+      padding-top: 50px; }
+
+.personajes-section {
+  margin-top: 60px;
+  padding-left: 60px; }
+  .personajes-section h2 {
+    position: relative;
+    padding-left: 20px; }
+  .personajes-section h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: #cb1515; }
+  .personajes-section h3 {
+    margin-top: 40px; }
+  .personajes-section .section-miles-morales {
+    display: flex;
+    align-items: center; }
+    .personajes-section .section-miles-morales p {
+      margin-left: 5%;
+      margin-right: 2%; }
+  .personajes-section .section-peter-parker {
+    padding-right: 60px;
+    display: flex;
+    align-items: center; }
+    .personajes-section .section-peter-parker p {
+      margin-right: 5%; }
+  .personajes-section .section-peter-benjamin-b-parker {
+    display: flex;
+    align-items: center; }
+  .personajes-section .section-gwen-stacy {
+    padding-right: 60px;
+    display: flex;
+    align-items: center; }
+    .personajes-section .section-gwen-stacy p {
+      margin-right: 5%; }
+  .personajes-section .section-peter-porker {
+    display: flex;
+    align-items: center; }
+  .personajes-section .section-peter-parker-detective {
+    padding-right: 60px;
+    display: flex;
+    align-items: center; }
+    .personajes-section .section-peter-parker-detective p {
+      margin-right: 5%; }
+  .personajes-section .section-peni-parker {
+    display: flex;
+    align-items: center; }
+  .personajes-section .section-kingpin {
+    padding-right: 60px;
+    display: flex;
+    align-items: center; }
+    .personajes-section .section-kingpin p {
+      margin-right: 5%; }
+  .personajes-section .section-olivia-octavius {
+    display: flex;
+    align-items: center; }
+  .personajes-section .section-marvel-may {
+    display: flex;
+    align-items: center; }
+    .personajes-section .section-marvel-may .personajes-marvel-may {
+      width: 30%; }
+  .personajes-section .section-merodeador {
+    display: flex;
+    align-items: center; }
+  .personajes-section .section-jefferson-davis {
+    padding-right: 60px;
+    display: flex;
+    align-items: center; }
+    .personajes-section .section-jefferson-davis p {
+      margin-right: 5%; }
+  .personajes-section .section-rio-morales {
+    display: flex;
+    align-items: center; }
+    .personajes-section .section-rio-morales p {
+      margin-left: 5%;
+      margin-right: 2%; }
+
+.section-trailer h2 {
+  margin-top: 50px;
+  position: relative;
+  padding-left: 20px; }
+
+.section-trailer h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background-color: #cb1515; }
+
+.section-trailer .h3-proximamente {
+  display: flex;
+  justify-content: center; }
+
+.section-trailer .trailer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center; }
+  .section-trailer .trailer img {
+    width: 50%; }
+
 footer {
   margin-top: auto;
   background-color: #000000;
@@ -94,8 +233,22 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 200px; }
-    footer .contenedor .caja-1 figure .logo-pequeño {
-      width: 100px; }
+    footer .contenedor .caja-1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      footer .contenedor .caja-1 figure .logo-pequeño {
+        width: 100px; }
+      footer .contenedor .caja-1 .mapa-sitio ul li {
+        list-style: none; }
+    footer .contenedor .caja-2 span {
+      color: #cb1515; }
+  footer .copyright {
+    grid-column: span 3;
+    text-align: center;
+    margin-block-start: 20px; }
+    footer .copyright small {
+      display: block; }
 
 /*media queries*/
 /*media querie mobile*/
@@ -141,6 +294,250 @@ footer {
         color: goldenrod; }
     main .derecha-main .miles-morales-main {
       display: none; }
+  .about-section {
+    padding-top: 30px;
+    padding-left: 0; }
+    .about-section h2 {
+      position: relative;
+      padding-left: 15px; }
+    .about-section h2::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 5px;
+      background-color: #cb1515; }
+    .about-section .image-and-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-left: 5%;
+      padding-right: 5%; }
+      .about-section .image-and-text img {
+        margin: 0 auto;
+        width: 60%;
+        padding-top: 50px; }
+      .about-section .image-and-text p {
+        padding-left: 0;
+        padding-right: 2%;
+        padding-top: 50px; }
+  .personajes-section {
+    margin-top: 30px;
+    padding-left: 0; }
+    .personajes-section h2 {
+      position: relative;
+      padding-left: 15px; }
+    .personajes-section h2::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 5px;
+      background-color: #cb1515; }
+    .personajes-section .h3-personajes {
+      text-align: center;
+      margin-top: 40px; }
+    .personajes-section .section-miles-morales {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-left: 5%;
+      padding-right: 5%; }
+      .personajes-section .section-miles-morales .personajes-miles-morales {
+        margin: 5% auto;
+        width: 70%;
+        height: auto; }
+      .personajes-section .section-miles-morales p {
+        margin: 0;
+        padding: 0;
+        padding-right: 2%; }
+    .personajes-section .section-peter-parker {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-left: 0;
+      padding-right: 0;
+      margin-right: 0; }
+      .personajes-section .section-peter-parker .personajes-peter-parker {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        width: 70%;
+        height: auto;
+        padding: 0; }
+      .personajes-section .section-peter-parker p {
+        padding-left: 5%; }
+    .personajes-section .section-peter-benjamin-b-parker {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-left: 5%;
+      padding-right: 5%; }
+      .personajes-section .section-peter-benjamin-b-parker .personajes-peter-benjamin-b-parker {
+        margin: 5% auto;
+        width: 70%;
+        height: auto; }
+      .personajes-section .section-peter-benjamin-b-parker p {
+        margin: 0;
+        padding: 0;
+        padding-right: 2%; }
+    .personajes-section .section-gwen-stacy {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-left: 0;
+      padding-right: 0;
+      margin-right: 0; }
+      .personajes-section .section-gwen-stacy .personajes-gwen-stacy {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        width: 70%;
+        height: auto;
+        padding: 0; }
+      .personajes-section .section-gwen-stacy p {
+        padding-left: 5%; }
+    .personajes-section .section-peter-porker {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-left: 5%;
+      padding-right: 5%; }
+      .personajes-section .section-peter-porker .personajes-peter-porker {
+        margin: 5% auto;
+        width: 70%;
+        height: auto; }
+      .personajes-section .section-peter-porker p {
+        margin: 0;
+        padding: 0;
+        padding-right: 2%; }
+    .personajes-section .section-peter-parker-detective {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-left: 0;
+      padding-right: 0;
+      margin-right: 0; }
+      .personajes-section .section-peter-parker-detective .personajes-peter-parker-detective {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        width: 70%;
+        height: auto;
+        padding: 0; }
+      .personajes-section .section-peter-parker-detective p {
+        padding-left: 5%; }
+    .personajes-section .section-peni-parker {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-left: 5%;
+      padding-right: 5%; }
+      .personajes-section .section-peni-parker .personajes-peni-parker {
+        margin: 5% auto;
+        width: 70%;
+        height: auto; }
+      .personajes-section .section-peni-parker p {
+        margin: 0;
+        padding: 0;
+        padding-right: 2%; }
+    .personajes-section .section-kingpin {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-left: 0;
+      padding-right: 0;
+      margin-right: 0; }
+      .personajes-section .section-kingpin .personajes-kingpin {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        width: 70%;
+        height: auto;
+        padding: 0; }
+      .personajes-section .section-kingpin p {
+        padding-left: 5%; }
+    .personajes-section .section-olivia-octavius {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-left: 5%;
+      padding-right: 5%; }
+      .personajes-section .section-olivia-octavius .personajes-olivia-octavius {
+        margin: 5% auto;
+        width: 70%;
+        height: auto; }
+      .personajes-section .section-olivia-octavius p {
+        margin: 0;
+        padding: 0;
+        padding-right: 2%; }
+    .personajes-section .section-merodeador {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-left: 5%;
+      padding-right: 5%; }
+      .personajes-section .section-merodeador .personajes-merodeador {
+        margin: 5% auto;
+        width: 70%;
+        height: auto; }
+      .personajes-section .section-merodeador p {
+        margin: 0;
+        padding: 0;
+        padding-right: 2%; }
+    .personajes-section .section-jefferson-davis {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-left: 0;
+      padding-right: 0;
+      margin-right: 0; }
+      .personajes-section .section-jefferson-davis .personajes-jefferson-davis {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        width: 70%;
+        height: auto;
+        padding: 0; }
+      .personajes-section .section-jefferson-davis p {
+        padding-left: 5%; }
+    .personajes-section .section-rio-morales {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-left: 5%;
+      padding-right: 5%; }
+      .personajes-section .section-rio-morales .personajes-rio-morales {
+        margin: 5% auto;
+        width: 70%;
+        height: auto; }
+      .personajes-section .section-rio-morales p {
+        margin: 0;
+        padding: 0;
+        padding-right: 2%; }
   /*estilos del footer*/
   footer {
     margin-top: 0;
@@ -149,6 +546,10 @@ footer {
       grid-template-columns: 1fr;
       grid-gap: 20px;
       justify-items: center; }
+      footer .contenedor .caja-1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
       footer .contenedor .caja-3 .red-social {
         display: flex;
         gap: 10px; }
@@ -200,6 +601,17 @@ footer {
         width: 100%;
         height: auto;
         object-fit: cover; }
+  .section-trailer h2 {
+    position: relative;
+    padding-left: 20px; }
+  .section-trailer h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: #cb1515; }
   /*estilos del footer*/
   footer {
     margin-top: 0;
